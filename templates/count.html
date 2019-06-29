@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>counting your words</title>
+</head>
+<body>
+	<h1>you entered {{ count }} word</h1>
+	<a href="{% url 'home' %}">Try again</a>
+	<h2>{{ full_text }}</h2>
+	<h1>the word dictionary count</h1>
+	<h2>
+		{% for word, countword in sorted_words %}
+			{{ word }}
+			<br/>
+			{{ countword }}
+			<br/>
+		{% endfor %}
+	</h2>
+</body>
+</html>

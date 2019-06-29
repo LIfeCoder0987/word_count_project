@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Word Counter</title>
+</head>
+<body>
+	<h1>Hello to word counter</h1>
+
+	<form action="{% url 'count' %}">
+		<textarea cols="40" rows="10" name="full_text"></textarea>
+		<br/>
+		<input type="submit" value="Count" />
+	</form><br/>
+
+	<button id="about_button">About</button>
+	
+	<script type="text/javascript">
+		document.getElementById('about_button').onclick = function() {
+			location.href = "{% url 'about' %}";
+		};
+	</script>
+</body>
+</html>
